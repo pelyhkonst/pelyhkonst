@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e961ee4-8c92-4fa3-aeae-562080c73e04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/JS_Petrychenko.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/mac.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-    </list>
+    <list default="true" id="0e961ee4-8c92-4fa3-aeae-562080c73e04" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,24 +120,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578153178795</updated>
-      <workItem from="1578153179923" duration="2651000" />
+      <workItem from="1578153179923" duration="3232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2651000" />
+    <option name="totallyTimeSpent" value="3232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1404" height="1356" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17381656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17381656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49926037" visible="true" weight="0.22861843" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49926037" visible="true" weight="0.22861843" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50073963" side_tool="true" weight="0.22861843" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
