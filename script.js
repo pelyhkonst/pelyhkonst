@@ -17,83 +17,77 @@ let appData = {
     expenses: {},
     optionalExpenses: {},
     income: [],
-    savings: true
+    savings: true,
+    chooseExpenses: function () {
+        for (i = 0; i < 2; i++){
+            let exp = prompt('Введите обязательную статью расходов'),
+                cost = prompt('Во сколько это обойдется?');
 
-}
-
-chooseExpenses ();
-
-function chooseExpenses (){
-    for (i = 0; i < 2; i++){
-        let exp = prompt('Введите обязательную статью расходов'),
-            cost = prompt('Во сколько это обойдется?');
-
-        if (exp != null && exp != '' && cost != null && cost != '') {
-            appData.expenses[exp] = cost;
-        }else {
-            alert('Ошибка')
-            i--;
+            if (exp != null && exp != '' && cost != null && cost != '') {
+                appData.expenses[exp] = cost;
+            }else {
+                alert('Ошибка')
+                i--;
+            }
         }
+    },
+    chooseOptExpenses: function () {
+        for (i = 1; i < 4; i++){
+            let oExp = prompt("Статья необязательных расходов?"),
+                oCost = prompt("Сколько обходится?");
 
-
-    }
-
-}
-
-function chooseOptExpenses(){
-    for (i = 1; i < 4; i++){
-        let oExp = prompt("Статья необязательных расходов?"),
-            oCost = prompt("Сколько обходится?");
-
-        if (oExp != null && oCost != null && oExp != '' && oCost != ''){
-            appData.optionalExpenses[oExp] = oCost;
+            if (oExp != null && oCost != null && oExp != '' && oCost != ''){
+                appData.optionalExpenses[oExp] = oCost;
+            } else {
+                alert("Ошибка")
+                i--;
+            }
+        }
+    },
+    detectDayBudget: function () {
+        appData.dayBudget = (appData.budget / 30).toFixed();
+    },
+    detectLevel: function () {
+        if (appData.dayBudget < 10){
+            alert("У Вас очень скромый бюджет")
+        } else if (appData.dayBudget > 10 && appData.dayBudget < 50){
+            alert("У Вас средний бюджет")
+        } else if (appData.dayBudget > 50 && appData.dayBudget < 200) {
+            alert("У Вас хороший бюджет")
         } else {
-            alert("Ошибка")
-            i--;
+            alert("У Вас большой бюджет")
         }
+    },
+    deposite: function () {
+        if (appData.savings == true) {
+            let save = +prompt('Ваши накопления?');
+            let percent = prompt('Под какой процент годовой');
+
+            appData.monthIncome = save*percent/100/12
+
+        }
+    },
+    chooseIncome: function () {
+        let profit = prompt("Перечислите источники вашего дохода (через запятую)", '');
+        while ((typeof(profit) != "string") || profit == null || profit == ''){
+            alert("Ошибка");
+            profit = prompt("Перечислите источники вашего дохода (через запятую)", '');
+        }
+        appData.income = profit.split(',');
+        appData.income.push(prompt("Что-то еще?", ''));
+        appData.income.sort();
+
+        appData.income.forEach(function (item, i, income) {
+            i = i+1;
+            alert("Способы дополнительного заработка: " + i +' - ' + item);
+
+        })
     }
 }
-chooseOptExpenses();
 
-detectDayBudget();
-function detectDayBudget () {
-    appData.dayBudget = (appData.budget / 30).toFixed();
-
+for (key in appData){
+    console.log("Наша программа включает в себя данные: " + key);
 }
-
-detectLevel();
-function detectLevel() {
-    if (appData.dayBudget < 10){
-        alert("У Вас очень скромый бюджет")
-    } else if (appData.dayBudget > 10 && appData.dayBudget < 50){
-        alert("У Вас средний бюджет")
-    } else if (appData.dayBudget > 50 && appData.dayBudget < 200) {
-        alert("У Вас хороший бюджет")
-    } else {
-        alert("У Вас большой бюджет")
-    }
-
-}
-
-
-
-deposite();
-function deposite() {
-
-    if (appData.savings == true) {
-        let save = +prompt('Ваши накопления?');
-        let percent = prompt('Под какой процент годовой');
-
-        appData.monthIncome = save*percent/100/12
-
-    }
-
-
-
-}
-alert("Месячный доход от процентов: " + appData.monthIncome);
-
-
 
 
 

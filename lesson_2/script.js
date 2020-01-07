@@ -1,30 +1,32 @@
-for (let i = 1; i < 10; i++){
-    if (i == 6)
-        continue;
-    console.log(i)
+let object = {
+    width: 1024,
+    height: 1690,
+    name: 'rectangle',
+
+};
+
+console.log(object)
+
+object.bool = true;
+
+object.colors = {
+    border: 'red',
+    background: 'black'
 }
 
-let q = 1;
-do{
-    q++;
-    if (q == 6)
-        continue;
-    console.log(q)
-}
-while (q < 10)
 
 
-let w = 1;
-while (w < 10){
-    w++;
-    if (w == 6)
-        continue;
-    console.log(w)
+for (let key in object){
+    console.log("Ключ - " + key + ', и его значение - ' + object[key])
 }
 
-function calc(a,b) {
-    return (a + b);
-}
+console.log(Object.keys(object).length);
 
-console.log(calc(2,3))
 
+let arr = ['one','two','three','four','five']
+
+arr.forEach(function (item, i, mass) {
+    console.log('сначала item: ' + item + ', затем i: ' + i + ' и наконец mass: ' + mass );
+})
+
+console.log(arr.length)
