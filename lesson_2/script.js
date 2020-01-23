@@ -1,21 +1,17 @@
-
-let a = document.getElementById('box').style.backgroundColor = 'blue'
-
-console.log(a)
+let x = prompt('Enter a value of x', '');
+let n = prompt('Enter the power of the x', '');
 
 
-let b = document.createElement('div');
-b.classList.add('black');
-document.body.appendChild(b)
+function pow(x, n) {
+   let res = x;
 
+   for (let i = 1; i < n; i++){
+       res *= x;
+   }
+   return res;
+   console.log('получили ' + res);
 
-
-
-
-
-
-
-
+}
 
 
 
