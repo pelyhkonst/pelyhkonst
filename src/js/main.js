@@ -27,7 +27,9 @@ let buttonStart = document.getElementById('start'),
 
 let money, time;
 
-
+expensBut.disabled = true;
+opExpensBut.disabled = true;
+countBugBtn.disabled = true;
 
 buttonStart.addEventListener('click', function () {
     money = +prompt('Ваш бюджет на месяц?');
@@ -44,11 +46,15 @@ buttonStart.addEventListener('click', function () {
     monthValue.value = new Date(Date.parse(time)).getMonth() + 1;
     dayValue.value = new Date(Date.parse(time)).getDate();
 
+    expensBut.disabled = false;
+    opExpensBut.disabled = false;
+    countBugBtndisabled = false;
+
 });
 
 expensBut.addEventListener('click', function (event) {
 
-    if (appData.budget != undefined){
+
     let sum = 0;
 
     for (i = 0; i < expItem.length; i++){
@@ -65,13 +71,6 @@ expensBut.addEventListener('click', function (event) {
     }
     expValue.textContent = sum;
 
-    }else{
-
-        expensBut.addEventListener('mouseover', function () {
-            expensBut.style.cursor = 's-resize';
-        })
-        event.preventDefault();
-    }
 });
 
 
