@@ -10,5 +10,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
     console.log(pass.replace(/-/g, ":"))
 
-})
 
+    pass.getBoundingClientRect()
+})
